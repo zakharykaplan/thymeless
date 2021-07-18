@@ -2,7 +2,7 @@
   {% for item in include.nav %}
     <li class="nav-item {% if item.url == page.url %}current{% endif %}">
       {% if item.subnav %}
-        <a href="{{ item.url }}">
+        <a href="{{ item.url | relative_url }}">
           {{ item.title }}
           <i class="fas fa-caret-down"></i>
         </a>
@@ -10,7 +10,7 @@
           {% include nav.html nav=item.subnav %}
         </nav>
       {% else %}
-        <a href="{{ item.url }}">{{ item.title }}</a>
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       {% endif %}
     </li>
   {% endfor %}
