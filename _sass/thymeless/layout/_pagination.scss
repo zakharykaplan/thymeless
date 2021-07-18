@@ -1,0 +1,17 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: middle;
+  vertical-align: middle;
+  gap: var(--spacer);
+  margin-top: var(--spacer-2);
+  text-align: center;
+
+  p, .pagination-item {
+    padding: var(--spacer) 0;
+  }
+
+  .pagination-item {
+    @extend .icon;
+  }
+}

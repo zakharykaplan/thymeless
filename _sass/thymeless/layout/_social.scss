@@ -1,0 +1,11 @@
+.social {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacer);
+  list-style: none;
+
+  .social-item {
+    @extend .icon;
+  }
+}
+

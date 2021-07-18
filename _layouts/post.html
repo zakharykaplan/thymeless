@@ -2,4 +2,46 @@
 layout: default
 ---
 
-{{ content }}
+<article class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+
+  <div class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {{ page.date | date_to_string }}
+    </time>
+
+    {% if page.author %}
+      <span>&nbsp;&bull;&nbsp;</span>
+      {% if page.author.size > 1 %}
+        <i class="post-icon fas fa-users"></i>
+      {% else %}
+        <i class="post-icon fas fa-user"></i>
+      {% endif %}
+      {% for author in page.author %}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          {{ author }}
+          {% if forloop.last == false %}, {% endif %}
+        </span>
+      {% endfor %}
+    {% endif %}
+
+    {% if page.categories.size > 0 %}
+      <span>&nbsp;&bull;&nbsp;</span>
+      <i class="post-icon fas fa-folder"></i>
+      {% for category in page.categories %}
+        <a class="post-category" href="{{ '/blog/categories' | relative_url }}#{{ category | slugify }}">{{ category }}</a>
+      {% endfor %}
+    {% endif %}
+
+    {% if page.tags.size > 0 %}
+      <span>&nbsp;&bull;&nbsp;</span>
+      <i class="post-icon fas fa-tag"></i>
+      {% for tag in page.tags %}
+        {% assign tag = tag | slugify %}
+        <a class="post-tag" href="{{ '/blog/tags' | relative_url }}#{{ tag }}">#{{ tag }}</a>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  {{ content }}
+</article>

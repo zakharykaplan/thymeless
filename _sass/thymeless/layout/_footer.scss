@@ -1,0 +1,17 @@
+.footer {
+  @extend .shadow;
+  margin-top: auto;
+  padding: var(--spacer);
+  border-top: .5px solid var(--border-color);
+  background-color: var(--main2-color-bg);
+  text-align: center;
+
+  > * {
+    margin: 0;
+    padding: 0 var(--spacer) var(--spacer);
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}

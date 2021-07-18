@@ -1,0 +1,75 @@
+// Screen
+$screen-sm: 35.5rem;
+$screen-md: 48rem;
+$screen-lg: 64rem;
+$screen-xl: 80rem;
+
+:root {
+  // Accent
+  --accent-color-light-1: var(--oc-cyan-9);
+  --accent-color-light-2: var(--oc-cyan-8);
+  --accent-color-dark-1: var(--oc-cyan-6);
+  --accent-color-dark-2: var(--oc-cyan-6);
+
+  // Colour
+  --border-color: var(--oc-gray-4);
+  --code-color-bg: var(--oc-gray-1);
+  --heading-color: var(--oc-black);
+  --link-color: var(--accent-color-light-1);
+  --link-hover-color: var(--accent-color-light-2);
+  --link-visited-color: var(--link-color);
+  --link-visited-hover-color: var(--link-hover-color);
+  --main-color-bg: var(--oc-gray-0);
+  --main-color: var(--oc-gray-9);
+  --main2-color-bg: var(--oc-gray-2);
+  --main3-color-bg: var(--oc-gray-3);
+  --shadow-color: var(--oc-gray-5);
+  --shadow2-color: var(--oc-gray-3);
+  --user-error-color: var(--oc-red-7);
+  --user-info-color: var(--oc-green-7);
+  --user-warning-color: var(--oc-yellow-7);
+
+  // Font
+  --font-family-mono: 'Fira Code';
+  --font-family-sans: 'Cabin';
+  --font-family-serif: 'Playfair Display';
+  --font-weight-bold: 600;
+  --font-weight-semibold: 500;
+  --font-weight-normal: 400;
+  --font-weight-light: 300;
+
+  // Text
+  --font-size: 16px;
+  --line-height: 1.5;
+
+  // Shape
+  --border-radius: .5em;
+
+  // Spacing
+  --spacer: 1rem;
+  --spacer-2: calc(var(--spacer) * 2);
+  --spacer-3: calc(var(--spacer) * 3);
+  --spacer-half: calc(var(--spacer) / 2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Colour
+    --border-color: var(--oc-gray-8);
+    --code-color-bg: var(--oc-gray-7);
+    --heading-color: var(--oc-white);
+    --link-color: var(--accent-color-dark-1);
+    --link-hover-color: var(--accent-color-dark-2);
+    --link-visited-color: var(--link-color);
+    --link-visited-hover-color: var(--link-hover-color);
+    --main-color-bg: var(--oc-gray-9);
+    --main-color: var(--oc-gray-4);
+    --main2-color-bg: var(--oc-gray-7);
+    --main3-color-bg: var(--oc-gray-8);
+    --shadow-main-color: var(--oc-gray-7);
+    --shadow2-color: var(--oc-gray-8);
+    --user-error-color: var(--oc-red-4);
+    --user-info-color: var(--oc-green-4);
+    --user-warning-color: var(--oc-yellow-4);
+  }
+}

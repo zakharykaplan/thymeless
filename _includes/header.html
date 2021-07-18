@@ -1,0 +1,9 @@
+<header class="header">
+  <a class="header-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+
+  {% if site.data.nav %}
+    <nav class="nav">
+      {% include nav.html nav=site.data.nav %}
+    </nav>
+  {% endif %}
+</header>

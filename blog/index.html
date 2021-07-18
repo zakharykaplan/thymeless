@@ -1,0 +1,18 @@
+---
+layout: default
+title: Blog
+---
+
+<h1>Blog</h1>
+
+{% assign posts = site.posts %}
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% endif %}
+
+{% if posts != empty %}
+  {% include posts.html %}
+  {% include pagination.html %}
+{% else %}
+  {% include empty.html %}
+{% endif %}

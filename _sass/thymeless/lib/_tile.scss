@@ -1,0 +1,11 @@
+.tile {
+  @extend .float;
+  @extend .shadow;
+  @extend .unlink;
+  border: .5px solid var(--border-color);
+  border-radius: var(--border-radius);
+
+  &:hover {
+    box-shadow: 0 15px 30px -10px var(--shadow-main-color);
+  }
+}

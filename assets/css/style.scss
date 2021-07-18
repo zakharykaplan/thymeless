@@ -1,0 +1,13 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "thymeless";
+@media (prefers-color-scheme: light) {
+  @import "syntax/{{ site.style.syntax.light | default: 'base16.light' }}";
+}
+@media (prefers-color-scheme: dark) {
+  @import "syntax/{{ site.style.syntax.dark | default: 'base16.dark' }}";
+}

@@ -1,0 +1,30 @@
+.header {
+  @extend .shadow;
+  display: flex;
+  align-items: center;
+  gap: var(--spacer);
+  height: 5rem;
+  z-index: 1;
+  padding: var(--spacer);
+  border-bottom: 2px solid var(--border-color);
+  background-color: var(--main2-color-bg);
+
+  .header-title {
+    @extend .float;
+    @extend .unlink;
+    margin: 0 var(--spacer);
+    font-family: var(--font-family-serif);
+    font-size: 1.3em;
+    font-weight: bold;
+
+    .tagline {
+      opacity: .5;
+    }
+  }
+
+  @media screen and (max-width: $screen-md) {
+    .nav {
+      display: none;
+    }
+  }
+}
