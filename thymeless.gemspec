@@ -6,11 +6,17 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Zakhary Kaplan"]
   spec.email         = ["zakharykaplan@gmail.com"]
 
-  spec.summary       = "TODO: Write a short summary, because Rubygems requires one."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "A clean Jekyll theme designed with simplicity in mind."
+  spec.homepage      = "https://github.com/zakharykaplan/thymeless"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f|
+    f.match(%r!^((assets|blog|_(data|includes|layouts|sass))/|((LICENSE|README)\.(md|txt)?|404\.html|_config\.(yml|yaml))$)!i)
+  }
 
-  spec.add_runtime_dependency "jekyll", "~> 4.2"
+  spec.add_runtime_dependency "github-pages"
+  spec.add_runtime_dependency "jekyll-feed", "~> 0.15"
+  spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
+  spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
+  spec.add_runtime_dependency "webrick", "~> 1.7"
 end
