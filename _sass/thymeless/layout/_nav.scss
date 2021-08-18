@@ -2,7 +2,7 @@ nav.nav {
   display: inline-block;
 
   ul.nav-list li.nav-item {
-    padding: 2px;
+    padding: 0;
     border-radius: var(--border-radius);
     white-space: nowrap;
 
@@ -21,7 +21,7 @@ nav.nav {
 
     a {
       @extend .unlink;
-      padding: var(--spacer-half);
+      display: block;
     }
   }
 
@@ -35,10 +35,13 @@ nav.nav {
     > li.nav-item {
       @extend .float;
       @extend .shadow;
-      padding: var(--spacer-half);
       border-radius: var(--border-radius);
       border-bottom: 2px solid var(--border-color);
       font-size: 1.15em;
+
+      > a {
+        padding: var(--spacer-half) var(--spacer);
+      }
     }
   }
 
@@ -65,9 +68,7 @@ nav.nav {
         list-style: none;
 
         a {
-          display: block;
-          padding-top: 0;
-          padding-bottom: 0;
+          padding: var(--spacer-quart) var(--spacer-half);
         }
       }
     }
