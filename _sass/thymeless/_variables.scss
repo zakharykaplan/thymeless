@@ -50,7 +50,6 @@ $screen-xl: 80rem;
   --spacer-2: calc(var(--spacer) * 2);
   --spacer-3: calc(var(--spacer) * 3);
   --spacer-half: calc(var(--spacer) / 2);
-  --spacer-quart: calc(var(--spacer) / 4);
 }
 
 @media (prefers-color-scheme: dark) {
