@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.name          = "thymeless"
   spec.version       = "0.1.0"
   spec.authors       = ["Zakhary Kaplan"]
-  spec.email         = ["zakharykaplan@gmail.com"]
+  spec.email         = ["me@zakhary.dev"]
 
   spec.summary       = "A clean Jekyll theme designed with simplicity in mind."
   spec.homepage      = "https://github.com/zakharykaplan/thymeless"
